@@ -5,7 +5,7 @@ const Home = ()=>{
          Hero Banner 
          <div>
             <h2>Best selling products</h2>
-            <p>Speakers of many</p>
+            <p>Speakers of many variations</p>
          </div>
       </>
    )
