@@ -36,7 +36,6 @@ const FooterBanner = ({footerBanner:{
             <img 
                src={image} 
                className="footer-banner-image"
-               alt="" 
             />
          </div>
       </div>
