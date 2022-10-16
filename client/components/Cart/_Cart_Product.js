@@ -7,7 +7,8 @@ const CartProduct = ({product}) => {
          />
          <div className="item-desc">
             <div className="flex top">
-               <h5></h5>
+               <h5>{product.name}</h5>
+               <h5>${product.price}</h5>
             </div>
          </div>
       </div>
