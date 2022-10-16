@@ -1,6 +1,15 @@
 import Link from "next/link"
 
-const HeroBanner = ({smallText, midText, largeText, image, product, buttonText}) =>{
+const HeroBanner = ({
+   bannner:{
+      smallText, 
+      midText, 
+      largeText, 
+      image, 
+      product, 
+      buttonText
+   }
+}) =>{
    return (
       <div className="hero-banner-container">
          <div>

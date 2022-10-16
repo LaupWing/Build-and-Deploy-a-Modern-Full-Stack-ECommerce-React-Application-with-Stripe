@@ -2,10 +2,11 @@ import FooterBanner from "../components/FooterBanner"
 import HeroBanner from "../components/HeroBanner"
 import { client } from "../lib/client"
 
-const Home = ()=>{
+const Home = ({products, banner})=>{
    return (
       <>
          <HeroBanner
+            banner={banner}
             smallText="Small Text"
             midText="Mid Text"
             largeText="Large Text"
