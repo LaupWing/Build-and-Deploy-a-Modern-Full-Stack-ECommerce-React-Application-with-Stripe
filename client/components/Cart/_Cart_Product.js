@@ -1,4 +1,5 @@
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai"
+import { TiDeleteOutline } from "react-icons/ti"
 
 const CartProduct = ({product}) => {
    return (  
@@ -35,6 +36,13 @@ const CartProduct = ({product}) => {
                      </span>
                   </p>
                </div>
+               <button
+                  type="button"
+                  className="remove-item"
+                  onClick={()=>{}}
+               >
+                  <TiDeleteOutline/>
+               </button>
             </div>
          </div>
       </div>
