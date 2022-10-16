@@ -1,3 +1,5 @@
+import { AiOutlineMinus } from "react-icons/ai";
+
 const CartProduct = ({product}) => {
    return (  
       <div className="product">
@@ -9,6 +11,18 @@ const CartProduct = ({product}) => {
             <div className="flex top">
                <h5>{product.name}</h5>
                <h5>${product.price}</h5>
+            </div>
+            <div className="flex bottom">
+               <div>
+                  <p className="quantity-desc">
+                     <span 
+                        className="minus"
+                        onClick={()=>{}}
+                     >
+                        <AiOutlineMinus/>
+                     </span>
+                  </p>
+               </div>
             </div>
          </div>
       </div>
