@@ -1,8 +1,9 @@
+import HeroBanner from "../components/HeroBanner"
 
 const Home = ()=>{
    return (
       <>
-         Hero Banner 
+         <HeroBanner/> 
          <div className="products-heading">
             <h2>Best selling products</h2>
             <p>Speakers of many variations</p>
