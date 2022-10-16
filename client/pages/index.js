@@ -1,3 +1,4 @@
+import FooterBanner from "../components/FooterBanner"
 import HeroBanner from "../components/HeroBanner"
 
 const Home = ()=>{
@@ -12,6 +13,7 @@ const Home = ()=>{
          <div className="products-container">
             {["Product 1", "Product 2"].map(product=>product)}
          </div>
+         <FooterBanner/>
       </>
    )
 }
