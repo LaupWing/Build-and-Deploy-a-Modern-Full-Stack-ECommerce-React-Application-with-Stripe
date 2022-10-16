@@ -1,4 +1,4 @@
-import { AiOutlineMinus } from "react-icons/ai";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 const CartProduct = ({product}) => {
    return (  
@@ -20,6 +20,18 @@ const CartProduct = ({product}) => {
                         onClick={()=>{}}
                      >
                         <AiOutlineMinus/>
+                     </span>
+                     <span 
+                        className="num"
+                        onClick={()=>{}}
+                     >
+                        {product.quantity}
+                     </span>
+                     <span 
+                        className="plus"
+                        onClick={()=>{}}
+                     >
+                        <AiOutlinePlus/>
                      </span>
                   </p>
                </div>
