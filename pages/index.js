@@ -5,7 +5,8 @@ import { client } from "../lib/client"
 const Home = ({products, banner})=>{
    return (
       <>
-         <HeroBanner
+         {console.log(banner)}
+         {/* <HeroBanner
             banner={banner}
             smallText="Small Text"
             midText="Mid Text"
@@ -13,7 +14,7 @@ const Home = ({products, banner})=>{
             image="https://sienaconstruction.com/wp-content/uploads/2017/05/test-image.jpg"
             product="product"
             buttonText="Button text"
-         /> 
+         />  */}
          <div className="products-heading">
             <h2>Best selling products</h2>
             <p>Speakers of many variations</p>
