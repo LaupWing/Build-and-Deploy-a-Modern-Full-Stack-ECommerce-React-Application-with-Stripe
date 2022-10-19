@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const Product = ({
    product:{
       image,
@@ -8,7 +10,11 @@ const Product = ({
 }) =>{
    return (
       <div>
-         Product
+         <Link href={`/product/${slug.current}`}>
+            <div className="product-card">
+               
+            </div>
+         </Link>
       </div>
    )
 }
