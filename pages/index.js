@@ -3,18 +3,12 @@ import HeroBanner from "../components/HeroBanner"
 import { client } from "../lib/client"
 
 const Home = ({products, banner})=>{
+   console.log(banner[0])
    return (
       <>
-         {console.log(banner)}
-         {/* <HeroBanner
-            banner={banner}
-            smallText="Small Text"
-            midText="Mid Text"
-            largeText="Large Text"
-            image="https://sienaconstruction.com/wp-content/uploads/2017/05/test-image.jpg"
-            product="product"
-            buttonText="Button text"
-         />  */}
+         <HeroBanner
+            banner={banner[0]}
+         /> 
          <div className="products-heading">
             <h2>Best selling products</h2>
             <p>Speakers of many variations</p>

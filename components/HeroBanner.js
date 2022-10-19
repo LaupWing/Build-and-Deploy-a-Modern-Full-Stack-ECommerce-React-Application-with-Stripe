@@ -1,13 +1,14 @@
 import Link from "next/link"
 
 const HeroBanner = ({
-   bannner:{
+   banner:{
       smallText, 
       midText, 
       largeText, 
       image, 
       product, 
-      buttonText
+      buttonText,
+      desc
    }
 }) =>{
    return (
@@ -17,7 +18,7 @@ const HeroBanner = ({
             <h3>{midText}</h3>
             <h1>{largeText}</h1>
             <img 
-               src={image} 
+               src={image[0]} 
                alt="headphones" 
                className="hero-banner-image"
             />
@@ -27,7 +28,7 @@ const HeroBanner = ({
                </Link>
                <div className="desc">
                   <h5>Description</h5>
-                  {/* <p>{heroBanner.desc}</p> */}
+                  <p>{desc}</p>
                </div>
             </div>
          </div>
