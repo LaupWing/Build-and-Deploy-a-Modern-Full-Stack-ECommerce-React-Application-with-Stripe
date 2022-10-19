@@ -1,5 +1,6 @@
 import FooterBanner from "../components/FooterBanner"
 import HeroBanner from "../components/HeroBanner"
+import Product from "../components/Product"
 import { client } from "../lib/client"
 
 const Home = ({products, banner})=>{
@@ -15,7 +16,7 @@ const Home = ({products, banner})=>{
          </div>
 
          <div className="products-container">
-            {products?.map(product=>product.name)}
+            {products?.map(product=><Product/>)}
          </div>
          {/* <FooterBanner/> */}
       </>
