@@ -5,7 +5,7 @@ const HeroBanner = ({
    banner:{
       smallText, 
       midText, 
-      largeText, 
+      largeText1, 
       image, 
       product, 
       buttonText,
@@ -17,7 +17,7 @@ const HeroBanner = ({
          <div>
             <p className="beats-solo">{smallText}</p>
             <h3>{midText}</h3>
-            <h1>{largeText}</h1>
+            <h1>{largeText1}</h1>
             <img 
                src={urlFor(image)} 
                alt="headphones" 
