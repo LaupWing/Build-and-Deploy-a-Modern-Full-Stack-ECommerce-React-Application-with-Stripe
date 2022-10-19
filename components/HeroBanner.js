@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { urlFor } from "../lib/client"
 
 const HeroBanner = ({
    banner:{
@@ -18,7 +19,7 @@ const HeroBanner = ({
             <h3>{midText}</h3>
             <h1>{largeText}</h1>
             <img 
-               src={image[0]} 
+               src={urlFor(image)} 
                alt="headphones" 
                className="hero-banner-image"
             />
