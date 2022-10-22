@@ -5,9 +5,9 @@ import product from "./product"
 import banner from "./banner"
 
 export default createSchema({
-  name: "default",
-  types: schemaTypes.concat([
-    product,
-    banner
-  ])
+   name: "default",
+   types: schemaTypes.concat([
+      product,
+      banner
+   ])
 })
