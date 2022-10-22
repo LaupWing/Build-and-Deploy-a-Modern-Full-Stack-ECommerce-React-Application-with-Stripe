@@ -9,7 +9,7 @@ const HeroBanner = ({
       image, 
       product, 
       buttonText,
-      desc
+      description
    }
 }) =>{
    return (
@@ -29,7 +29,7 @@ const HeroBanner = ({
                </Link>
                <div className="desc">
                   <h5>Description</h5>
-                  <p>{desc}</p>
+                  <p>{description}</p>
                </div>
             </div>
          </div>
