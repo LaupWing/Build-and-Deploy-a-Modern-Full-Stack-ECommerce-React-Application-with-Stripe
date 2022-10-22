@@ -8,7 +8,7 @@ const FooterBanner = ({footerBanner:{
    saleTime,
    smallText,
    midText,
-   desc,
+   description,
    product,
    buttonText,
    image
@@ -25,7 +25,7 @@ const FooterBanner = ({footerBanner:{
             <div className="right">
                <p>{smallText}</p>
                <h3>{midText}</h3>
-               <p>{desc}</p>
+               <p>{description}</p>
                <Link href={`/product/${product}`}>
                   <button
                      type="button"
