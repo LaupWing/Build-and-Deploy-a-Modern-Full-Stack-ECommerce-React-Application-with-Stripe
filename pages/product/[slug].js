@@ -18,16 +18,20 @@ const Product = () => {
    )
 }
 
-export const getServerSideProps = async ()=>{
-   const query = "*[_type == 'product']"
-   const products = await client.fetch(query)
+export const getStaticProps = async ({
+   params:{
+      slug
+   }
+})=>{
+   const productQuery = `*[_type == 'product' && slug.current == ${slug}][0]`
+   const product = await client.fetch(productQuery)
 
-   const bannerQuery = "*[_type == 'banner']"
-   const banner = await client.fetch(bannerQuery)
+   const productsQuery = "*[_type == 'product']"
+   const products = await client.fetch(productsQuery)
 
    return {
       props: {
-         banner,
+         product,
          products
       }
    }
