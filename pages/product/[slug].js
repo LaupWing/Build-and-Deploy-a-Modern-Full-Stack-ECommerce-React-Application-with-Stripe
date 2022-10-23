@@ -1,4 +1,5 @@
 import React from 'react'
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import { client, urlFor } from '../../lib/client'
 
 const Product = ({
@@ -29,7 +30,17 @@ const Product = ({
                   ))}
                </div> */}
                <div className="product-details-desc">
-                  
+                  <h1>{name}</h1>
+                  <div className="reviews">
+                     <div>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                        <AiOutlineStar/>
+                     </div>
+                     <p>(20)</p>
+                  </div>
                </div>
             </div>
          </div>
