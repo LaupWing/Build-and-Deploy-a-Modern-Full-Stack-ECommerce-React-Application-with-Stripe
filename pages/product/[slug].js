@@ -20,6 +20,17 @@ const Product = ({
                      alt="" 
                   />
                </div>
+               {/* <div className="small-images-container">
+                  {image?.map((item, i)=>(
+                     <img 
+                        src={urlFor(item)} 
+                        alt="" 
+                     />
+                  ))}
+               </div> */}
+               <div className="product-details-desc">
+                  
+               </div>
             </div>
          </div>
       </div>
