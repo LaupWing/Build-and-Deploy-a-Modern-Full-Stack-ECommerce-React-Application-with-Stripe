@@ -4,11 +4,10 @@ import Product from "../components/Product"
 import { client } from "../lib/client"
 
 const Home = ({products, banner})=>{
-   console.log(banner[0])
    return (
       <>
          <HeroBanner
-            banner={banner[0]}
+            banner={banner && banner[0]}
          /> 
          <div className="products-heading">
             <h2>Best selling products</h2>
@@ -21,7 +20,9 @@ const Home = ({products, banner})=>{
                product={product}
             />)}
          </div>
-         <FooterBanner banner/>
+         <FooterBanner 
+            banner={banner && banner[0]}
+         />
       </>
    )
 }
