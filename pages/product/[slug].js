@@ -16,7 +16,7 @@ const Product = ({
             <div>
                <div className="image-container">
                   <img 
-                     src={urlFor} 
+                     src={urlFor(image && image[0])} 
                      alt="" 
                   />
                </div>
@@ -50,7 +50,7 @@ export const getStaticProps = async ({
       slug
    }
 })=>{
-   const productQuery = `*[_type == 'product' && slug.current == ${slug}][0]`
+   const productQuery = `*[_type == 'product' && slug.current == '${slug}'][0]`
    const product = await client.fetch(productQuery)
 
    const productsQuery = "*[_type == 'product']"
