@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { urlFor } from "../lib/client"
 
-const FooterBanner = ({footerBanner:{
+const FooterBanner = ({banner:{
    discount,
    largeText1,
    largeText2,

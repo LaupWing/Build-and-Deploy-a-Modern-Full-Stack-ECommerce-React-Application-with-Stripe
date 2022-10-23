@@ -21,7 +21,7 @@ const Home = ({products, banner})=>{
                product={product}
             />)}
          </div>
-         {/* <FooterBanner/> */}
+         <FooterBanner banner/>
       </>
    )
 }
