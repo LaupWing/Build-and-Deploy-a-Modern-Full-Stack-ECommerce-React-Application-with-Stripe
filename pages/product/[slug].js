@@ -3,6 +3,7 @@ import ActionButtons from '../../components/ActionButtons'
 import Product from '../../components/Product'
 import Quantity from '../../components/Quantity'
 import Reviews from '../../components/Reviews'
+import { useStateContext } from '../../context/StateContext'
 import { client, urlFor } from '../../lib/client'
 
 const ProductDetail = ({
@@ -15,7 +16,6 @@ const ProductDetail = ({
    products
 }) => {
    const [index, setIndex] = useState(0)
-
 
    return (
       <div>
