@@ -51,24 +51,31 @@ const Cart = () =>{
                            <h5>{item.name}</h5>
                            <h4>${item.price}</h4>
                         </div>
-                     </div>
-                     <div className="flex bottom">
-                        <div>
-                           <p className="quantity-desc">
-                              <span
-                                 className="minus"
-                              >
-                                 <AiOutlineMinus />
-                              </span>
-                              <span className="num">
-                                 0
-                              </span>
-                              <span
-                                 className="plus"
-                              >
-                                 <AiOutlinePlus />
-                              </span>
-                           </p>
+                        <div className="flex bottom">
+                           <div>
+                              <p className="quantity-desc">
+                                 <span
+                                    className="minus"
+                                 >
+                                    <AiOutlineMinus />
+                                 </span>
+                                 <span className="num">
+                                    0
+                                 </span>
+                                 <span
+                                    className="plus"
+                                 >
+                                    <AiOutlinePlus />
+                                 </span>
+                              </p>
+                           </div>
+                           <button
+                              type="button"
+                              className="remove-item"
+                              onClick={()=>{}}
+                           >
+                              <TiDeleteOutline/>
+                           </button>
                         </div>
                      </div>
                   </div>
