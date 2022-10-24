@@ -38,8 +38,19 @@ const Product = ({
                   <p>{details}</p>
                   <p className="price">${price}</p>
                   <Quantity/>
-                  <div>
-
+                  <div className="buttons">
+                     <button 
+                        className="add-to-cart"
+                        type="button"
+                     >
+                        Add to Cart
+                     </button>
+                     <button 
+                        className="buy-now"
+                        type="button"
+                     >
+                        Buy now
+                     </button>
                   </div>
                </div>
             </div>
