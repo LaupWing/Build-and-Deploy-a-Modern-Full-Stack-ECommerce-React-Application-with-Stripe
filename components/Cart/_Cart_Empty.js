@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { AiOutlineShopping } from "react-icons/ai";
 
-const EmptyCart = () => {
+const CartEmpty = () => {
    return (
       <div className="empty-cart">
          <AiOutlineShopping size={150}/>
@@ -19,4 +19,4 @@ const EmptyCart = () => {
    )
 }
  
-export default EmptyCart;
+export default CartEmpty;
