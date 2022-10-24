@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiFillStar, AiOutlineMinus, AiOutlinePlus, AiOutlineStar } from 'react-icons/ai'
+import ActionButtons from '../../components/ActionButtons'
 import Quantity from '../../components/Quantity'
 import Reviews from '../../components/Reviews'
 import { client, urlFor } from '../../lib/client'
@@ -31,27 +32,14 @@ const Product = ({
                      />
                   ))}
                </div> */}
-               <div className="product-details-desc">
+               <div className="product-detail-desc">
                   <h1>{name}</h1>
                   <Reviews/>
                   <h4>Details:</h4>
                   <p>{details}</p>
                   <p className="price">${price}</p>
                   <Quantity/>
-                  <div className="buttons">
-                     <button 
-                        className="add-to-cart"
-                        type="button"
-                     >
-                        Add to Cart
-                     </button>
-                     <button 
-                        className="buy-now"
-                        type="button"
-                     >
-                        Buy now
-                     </button>
-                  </div>
+                  <ActionButtons/>
                </div>
             </div>
          </div>
