@@ -1,7 +1,13 @@
-import EmptyCart from "./_Cart_Empty";
-import CartProduct from "./_Cart_Product";
+import { useRef } from "react"
+import { AiOutlineLeft } from "react-icons/ai"
+import { useStateContext } from "../../context/StateContext"
+import EmptyCart from "./_Cart_Empty"
+import CartProduct from "./_Cart_Product"
 
 const Cart = () => {
+   const cartRef = useRef()
+   const {totalPrice, totalQuantities, cartItems, setShowCart} = useStateContext()
+
    return (
       <div className="cart-wrapper" ref={cartRef}>
          <div className="cart-container">

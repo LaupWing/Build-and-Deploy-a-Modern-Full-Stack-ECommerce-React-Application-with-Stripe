@@ -1,11 +1,12 @@
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai"
 import { TiDeleteOutline } from "react-icons/ti"
+import { urlFor } from "../../lib/client";
 
 const CartProduct = ({product}) => {
    return (  
       <div className="product">
          <img 
-            src={product.image[0]}
+            src={urlFor(product.image[0])}
             className="cart-product-image" 
          />
          <div className="item-desc">
