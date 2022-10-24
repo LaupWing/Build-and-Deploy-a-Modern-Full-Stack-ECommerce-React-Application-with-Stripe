@@ -32,15 +32,15 @@ const ProductDetail = ({
                      />
                   ))}
                </div> */}
-               <div className="product-detail-desc">
-                  <h1>{name}</h1>
-                  <Reviews/>
-                  <h4>Details:</h4>
-                  <p>{details}</p>
-                  <p className="price">${price}</p>
-                  <Quantity/>
-                  <ActionButtons/>
-               </div>
+            </div>
+            <div className="product-detail-desc">
+               <h1>{name}</h1>
+               <Reviews/>
+               <h4>Details:</h4>
+               <p>{details}</p>
+               <p className="price">${price}</p>
+               <Quantity/>
+               <ActionButtons/>
             </div>
          </div>
          <div className="maylike-products-wrapper">
