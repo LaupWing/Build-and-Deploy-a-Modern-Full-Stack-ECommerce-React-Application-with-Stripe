@@ -1,11 +1,11 @@
 import React from 'react'
-import { AiFillStar, AiOutlineMinus, AiOutlinePlus, AiOutlineStar } from 'react-icons/ai'
 import ActionButtons from '../../components/ActionButtons'
+import Product from '../../components/Product'
 import Quantity from '../../components/Quantity'
 import Reviews from '../../components/Reviews'
 import { client, urlFor } from '../../lib/client'
 
-const Product = ({
+const ProductDetail = ({
    product:{
       image, 
       name,
@@ -40,6 +40,16 @@ const Product = ({
                   <p className="price">${price}</p>
                   <Quantity/>
                   <ActionButtons/>
+               </div>
+            </div>
+         </div>
+         <div className="maylike-products-wrapper">
+            <h2>You may also like</h2>
+            <div className="marquee">
+               <div className="maylike-products-container">
+                  {products.map((item)=>(
+                     <Product/>
+                  ))}
                </div>
             </div>
          </div>
@@ -85,4 +95,4 @@ export const getStaticProps = async ({
    }
 }
 
-export default Product
+export default ProductDetail
