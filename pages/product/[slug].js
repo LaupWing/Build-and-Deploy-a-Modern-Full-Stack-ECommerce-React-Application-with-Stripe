@@ -3,19 +3,19 @@ import ActionButtons from '../../components/ActionButtons'
 import Product from '../../components/Product'
 import Quantity from '../../components/Quantity'
 import Reviews from '../../components/Reviews'
-import { useStateContext } from '../../context/StateContext'
 import { client, urlFor } from '../../lib/client'
 
 const ProductDetail = ({
-   product:{
+   product, 
+   products
+}) => {
+   const [index, setIndex] = useState(0)
+   const {
       image, 
       name,
       details,
       price
-   }, 
-   products
-}) => {
-   const [index, setIndex] = useState(0)
+   } = product
 
    return (
       <div>
@@ -45,7 +45,9 @@ const ProductDetail = ({
                <p>{details}</p>
                <p className="price">${price}</p>
                <Quantity/>
-               <ActionButtons/>
+               <ActionButtons
+                  product={product}
+               />
             </div>
          </div>
          <div className="maylike-products-wrapper">

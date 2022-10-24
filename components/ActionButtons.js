@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStateContext } from '../context/StateContext'
 
-const ActionButtons = () => {
+const ActionButtons = ({product}) => {
    const {onAdd} = useStateContext()
    
    return (
@@ -9,7 +9,7 @@ const ActionButtons = () => {
          <button
             className="add-to-cart"
             type="button"
-            onClick={onAdd}
+            onClick={()=>onAdd(product)}
          >
             Add to Cart
          </button>

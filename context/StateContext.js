@@ -10,7 +10,7 @@ export const StateContext = ({children}) =>{
    const [totalQuantities, setTotalQuantities] = useState(0)
    const [quantity, setQuantity] = useState(1)
 
-   const onAdd = (product, quantity)=>{
+   const onAdd = (product)=>{
       const checkProductInCart = cartItems.find((item)=>item._id === product._id)
       setTotalPrice((prevTotalPrice)=> prevTotalPrice + product.price * quantity)
       setTotalQuantities((prevTotalQuantities)=> prevTotalQuantities + quantity)
