@@ -18,10 +18,10 @@ export default async function handler(req, res) {
             billing_address_collection: "auto",
             shipping_options:[
                {
-                  shipping_rate: ""
+                  shipping_rate: "shr_1LwhrQItjhXEqsOU85bsxDsm"
                },
                {
-                  shipping_rate: ""
+                  shipping_rate: "shr_1LwhrzItjhXEqsOUJYFxALBw"
                },
             ],
             success_url: `${req.headers.origin}/?success=true`,
