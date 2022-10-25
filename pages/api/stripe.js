@@ -13,6 +13,17 @@ export default async function handler(req, res) {
                },
             ],
             mode: 'payment',
+            submit_type: "pay",
+            payment_method_types: ["card"],
+            billing_address_collection: "auto",
+            shipping_options:[
+               {
+                  shipping_rate: ""
+               },
+               {
+                  shipping_rate: ""
+               },
+            ],
             success_url: `${req.headers.origin}/?success=true`,
             cancel_url: `${req.headers.origin}/?canceled=true`,
          });
