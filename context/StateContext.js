@@ -48,12 +48,18 @@ export const StateContext = ({children}) =>{
       index = cartItems.findIndex(item => item._id === id)
 
       if(value === "inc"){
-         setCartItems([...cartItems, {...foundProduct, quantity: foundProduct.quantity + 1}])
+         setCartItems([...cartItems].map(item => item._id === id ? 
+            {...item, quantity: item.quantity + 1}:
+            item
+         ))
          setTotalPrice((prevTotalPrice)=> prevTotalPrice + foundProduct.price)
          setTotalQuantities(prevTotalQuantities => prevTotalQuantities + 1)
       } else if (value === "dec"){
          if(foundProduct.quantity > 1){
-            setCartItems([...cartItems, {...foundProduct, quantity: foundProduct.quantity - 1}])
+            setCartItems([...cartItems].map(item => item._id === id ? 
+               {...item, quantity: item.quantity - 1}:
+               item
+            ))
             setTotalPrice((prevTotalPrice)=> prevTotalPrice - foundProduct.price)
             setTotalQuantities(prevTotalQuantities => prevTotalQuantities - 1)
          }
