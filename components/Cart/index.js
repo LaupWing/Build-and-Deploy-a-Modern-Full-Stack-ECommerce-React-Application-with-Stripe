@@ -7,7 +7,7 @@ import CartTotalPrice from "./_Cart_TotalPrice"
 
 const Cart = () => {
    const cartRef = useRef()
-   const {totalPrice, totalQuantities, cartItems, setShowCart} = useStateContext()
+   const {totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity} = useStateContext()
 
    return (
       <div className="cart-wrapper" ref={cartRef}>
@@ -23,7 +23,12 @@ const Cart = () => {
             </button>
             {cartItems.length < 1 && <CartEmpty/>}
             <div className="product-container">
-               {cartItems.length >= 1 && cartItems.map(item=> <CartProduct product={item}/>)}
+               {cartItems.length >= 1 && cartItems.map(item=> (
+                  <CartProduct 
+                     product={item}
+                     toggleCartItemQuantity={toggleCartItemQuantity}
+                  />
+               ))}
             </div>
             {cartItems.length >= 1 && (
                <CartTotalPrice

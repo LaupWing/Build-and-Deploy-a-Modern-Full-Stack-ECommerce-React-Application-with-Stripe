@@ -2,7 +2,7 @@ import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai"
 import { TiDeleteOutline } from "react-icons/ti"
 import { urlFor } from "../../lib/client";
 
-const CartProduct = ({product}) => {
+const CartProduct = ({product, toggleCartItemQuantity}) => {
    return (  
       <div className="product">
          <img 
@@ -19,19 +19,16 @@ const CartProduct = ({product}) => {
                   <p className="quantity-desc">
                      <span 
                         className="minus"
-                        onClick={()=>{}}
+                        onClick={()=>{toggleCartItemQuantity(product._id, "dec")}}
                      >
                         <AiOutlineMinus/>
                      </span>
-                     <span 
-                        className="num"
-                        onClick={()=>{}}
-                     >
+                     <span className="num">
                         {product.quantity}
                      </span>
                      <span 
                         className="plus"
-                        onClick={()=>{}}
+                        onClick={()=>{toggleCartItemQuantity(product._id, "inc")}}
                      >
                         <AiOutlinePlus/>
                      </span>
