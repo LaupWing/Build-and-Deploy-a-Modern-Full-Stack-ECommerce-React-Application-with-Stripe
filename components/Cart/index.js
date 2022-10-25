@@ -3,6 +3,7 @@ import { AiOutlineLeft } from "react-icons/ai"
 import { useStateContext } from "../../context/StateContext"
 import CartEmpty from "./_Cart_Empty"
 import CartProduct from "./_Cart_Product"
+import CartTotalPrice from "./_Cart_TotalPrice"
 
 const Cart = () => {
    const cartRef = useRef()
@@ -24,6 +25,12 @@ const Cart = () => {
             <div className="product-container">
                {cartItems.length >= 1 && cartItems.map(item=> <CartProduct product={item}/>)}
             </div>
+            {cartItems.length >= 1 && (
+               <CartTotalPrice
+                  handleCheckout={()=>{}}
+                  totalPrice={totalPrice}
+               />
+            )}
          </div>
       </div>
    )

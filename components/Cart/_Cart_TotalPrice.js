@@ -1,4 +1,4 @@
-const TotalPrice = ({totalPrice, handleCheckout}) => {
+const CartTotalPrice = ({totalPrice, handleCheckout}) => {
    return (
       <div className="cart-bottom">
          <div className="total">
@@ -18,4 +18,4 @@ const TotalPrice = ({totalPrice, handleCheckout}) => {
    )
 }
 
-export default TotalPrice;
+export default CartTotalPrice
