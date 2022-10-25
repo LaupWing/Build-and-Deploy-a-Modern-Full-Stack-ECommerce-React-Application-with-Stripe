@@ -7,7 +7,7 @@ import CartTotalPrice from "./_Cart_TotalPrice"
 
 const Cart = () => {
    const cartRef = useRef()
-   const {totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity} = useStateContext()
+   const {totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove} = useStateContext()
 
    return (
       <div className="cart-wrapper" ref={cartRef}>
@@ -27,6 +27,7 @@ const Cart = () => {
                   <CartProduct 
                      product={item}
                      toggleCartItemQuantity={toggleCartItemQuantity}
+                     onRemove={onRemove}
                   />
                ))}
             </div>
