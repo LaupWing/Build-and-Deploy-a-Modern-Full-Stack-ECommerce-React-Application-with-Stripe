@@ -6,12 +6,12 @@ import Reviews from '../../components/Reviews'
 import { client, urlFor } from '../../lib/client'
 
 const ProductDetail = ({
-   product, 
+   product,
    products
 }) => {
    const [index, setIndex] = useState(0)
    const {
-      image, 
+      image,
       name,
       details,
       price
@@ -22,17 +22,17 @@ const ProductDetail = ({
          <div className="product-detail-container">
             <div>
                <div className="image-container">
-                  <img 
-                     src={urlFor(image && image[index])} 
+                  <img
+                     src={urlFor(image && image[index])}
                      className="product-detail-image"
                   />
                </div>
                <div className="small-images-container">
-                  {image?.map((item, i)=>(
-                     <img 
-                        src={urlFor(item)} 
-                        className={i === index ? 'small-image selected-image' : 'small-image'} 
-                        onMouseEnter={()=>{setIndex(i)}}
+                  {image?.map((item, i) => (
+                     <img
+                        src={urlFor(item)}
+                        className={i === index ? 'small-image selected-image' : 'small-image'}
+                        onMouseEnter={() => { setIndex(i) }}
                         key={i}
                      />
                   ))}
@@ -40,11 +40,11 @@ const ProductDetail = ({
             </div>
             <div className="product-detail-desc">
                <h1>{name}</h1>
-               <Reviews/>
+               <Reviews />
                <h4>Details:</h4>
                <p>{details}</p>
                <p className="price">${price}</p>
-               <Quantity/>
+               <Quantity />
                <ActionButtons
                   product={product}
                />
@@ -54,8 +54,8 @@ const ProductDetail = ({
             <h2>You may also like</h2>
             <div className="marquee">
                <div className="maylike-products-container track">
-                  {products.map((item)=>(
-                     <Product 
+                  {products.map((item) => (
+                     <Product
                         product={item}
                         key={item._id}
                      />
@@ -67,15 +67,15 @@ const ProductDetail = ({
    )
 }
 
-export const getStaticPaths = async ({})=>{
+export const getStaticPaths = async ({ }) => {
    const query = `*[_type == "product"] {
       slug {
          current
       }
    }`
    const products = await client.fetch(query)
-   const paths = products.map(product=>({
-      params:{
+   const paths = products.map(product => ({
+      params: {
          slug: product.slug.current
       }
    }))
@@ -87,10 +87,10 @@ export const getStaticPaths = async ({})=>{
 }
 
 export const getStaticProps = async ({
-   params:{
+   params: {
       slug
    }
-})=>{
+}) => {
    const productQuery = `*[_type == 'product' && slug.current == '${slug}'][0]`
    const product = await client.fetch(productQuery)
 
