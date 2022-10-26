@@ -2,8 +2,13 @@ import React from 'react'
 import { useStateContext } from '../context/StateContext'
 
 const ActionButtons = ({product}) => {
-   const {onAdd} = useStateContext()
+   const {onAdd, setShowCart, quantity} = useStateContext()
    
+   const handleBuyNow = ()=>{
+      onAdd(product, quantity)
+      setShowCart(true)
+   }
+
    return (
       <div className="buttons">
          <button
@@ -16,6 +21,7 @@ const ActionButtons = ({product}) => {
          <button
             className="buy-now"
             type="button"
+            onClick={handleBuyNow}
          >
             Buy now
          </button>
